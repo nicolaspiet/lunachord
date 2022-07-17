@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>LunaChord</title>
+		<link rel="stylesheet" href="components/style/style-home.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	</head>
+	<body">
+		<section class="hero is-fullheight header-image">
+			<!-- Hero head: will stick at the top -->
+			<div class="hero-head">
+				<nav class="navbar" role="navigation" aria-label="main navigation">
+					<div class="navbar-brand">
+						<a class="navbar-item" href="">
+							<span class="title is-5">ChordConsultant</span>
+						</a>
+						<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+						</a>
+					</div>
+					<div id="navbarBasicExample" class="navbar-menu">
+						<div class="navbar-start">
+							<a href="home.html" class="navbar-item">
+								Home
+							</a>
+						</div>
+						<div class="navbar-end">
+							<div class="navbar-item">
+								
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!-- Hero content: will be in the middle -->
+			<div style="padding-top: 0;" class="hero-body">
+				<div id="first-page" class="container has-text-centered">
+					<div class="columns">
+						<div class="column">
+							<span class="title is-4">Consult guitar chords using the field below</span>
+						</div>
+					</div>
+					<div style="padding-top: 0;" class="columns">
+						<div style="padding-top: 0;" class="column">
+							<span class="subtitle is-6">If the chords do not appear, the chord that you are looking for probably does not exist.</span>
+						</div>
+					</div>
+					<div class="columns is-centered">
+						<div class="column"></div>
+						<div class="column">
+							<div class="field field has-addons has-addons-centered is-centered">
+								<p class="control has-text-centered">
+									<input id="chord" class="input is-expanded is-normal" type="text" placeholder="Acordes vem aqui">
+								</p>
+								<p id="search-chord" class="control has-text-centered">
+									<button onclick="consult()" class="button is-info">Pesquisar</button>
+								</p>
+							</div>
+						</div>
+						<div class="column"></div>
+					</div>
+				</div>
+			</div>
+			<div style="padding-top: 0;" class="hero-body">
+				<div id="second-page" class="container has-text-centered">
+					<div class="columns v-centered">
+						<div class="column">
+							<button onclick="backToFP()" class="button is-link">Back</button>
+						</div>
+					</div>
+					<div class="columns is-centered">
+						<div class="column">
+							<figure style="height: 400px">
+								<embed class="has-ratio" id="embed-chords" type="text/html" src="https://api.uberchord.com/v1/embed/chords?nameLike=E" height="100%">
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Hero footer: will stick at the bottom -->
+			<div class="hero-foot">
+				<footer class="footer">
+					<div class="content has-text-centered">
+						<p>
+							<strong>Site</strong> by <a href="https://github.com/nicolaspiet">Nicolas Pietro</a>.
+						</p>
+						<p >
+							All chords are from <a href="https://www.uberchord.com/">Uberchord</a>
+						</p>
+					</div>
+				</footer>
+			</div>
+		</section>
+		<script src="components/src/search_system.js"></script>
+	</body>
+</html>
